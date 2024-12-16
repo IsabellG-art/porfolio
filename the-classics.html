@@ -7,6 +7,41 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
+ <style>
+ /* Ensure carousel container is centered */
+    .carousel-container {
+      max-width: 400px;   /* Max width for the carousel */
+      margin: 0 auto;     /* Horizontally center the carousel */
+      height: 300px;      /* Fixed height for the carousel */
+	   border: 5px solid white;   /* White border around the carousel */
+      border-radius: 10px;       /* Optional: rounded corners for the border */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow effect */
+    }
+
+    /* Ensure images inside carousel are properly sized */
+    .carousel-item img {
+      width: 100%;        /* Make the image take full width */
+      height: 100%;       /* Make the image take full height */
+      object-fit: cover;  /* Ensure the image covers the container */
+    }
+
+    /* Flexbox wrapper to center the carousel both horizontally and vertically */
+    .carousel-wrapper {
+      display: flex;
+      justify-content: center;  /* Center horizontally */
+      align-items: center;      /* Center vertically */
+      height: 100vh;            /* Full viewport height */
+    }
+	 /* Style for the image next to the carousel */
+    .side-image {
+      margin-left: 20px;        /* Space between the carousel and image */
+      margin-top: -300px;  /* Move the image 50px upwards */     
+	 width: 250px;             /* Adjust the image width */
+      height: auto;             /* Maintain aspect ratio */
+      border: 3px solid white;  /* Optional white border around the image */
+      border-radius: 8px;       /* Optional: rounded corners */
+    }
+  </style>
 </head>
 <body>
 <div class="container p-5 my-5 bg-dark text-white">
@@ -14,7 +49,7 @@
   <p>Art below</p>
 </div>
 
-<body style="background-color:Purple;">
+<body style="background-color:Gray;">
 
 <nav class="navbar navbar-expand-sm bg-light">
  <div class="container-fluid">
@@ -43,10 +78,106 @@
 
 </div>
 
+<div class="container-fluid mt-5">
+    <h2>1960 Hundson Hornet</h2>
+  
+   <!-- First small carousel -->
+  <div class="carousel-container">
+    <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="1960.jpg" class="d-block w-100" alt="Art 1">
+        </div>
+        <div class="carousel-item">
+          <img src="1960_1.jpg" class="d-block w-100" alt="Art 2">
+        </div>
+        <div class="carousel-item">
+          <img src="1960_2.jpg" class="d-block w-100" alt="Art 3">
+        </div>
+      </div>
+	  <div class="carousel-item">
+          <img src="1960_3.jpg" class="d-block w-100" alt="Art 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+   <!-- Image next to the carousel -->
+  <img src="car-1.png" class="side-image" alt="Side Image">
+</div>
+  
+  <h2>1950 Impala</h2>
+<!-- Second Row with 4 Images -->
+  <div class="carousel-container">
+    <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="1950.jpg" class="d-block w-100" alt="Art 4">
+        </div>
+        <div class="carousel-item">
+          <img src="1950_1.jpg" class="d-block w-100" alt="Art 5">
+        </div>
+        <div class="carousel-item">
+          <img src="1950_2.jpg" class="d-block w-100" alt="Art 6">
+        </div>
+      </div>
+	  <div class="carousel-item">
+          <img src="1950_3.jpg" class="d-block w-100" alt="Art 6">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+   <!-- Image next to the carousel -->
+  <img src="car-2.png" class="side-image" alt="Side Image">
+</div>
 
-
-
-
+  <h2>1958 Plymouth Fury</h2>
+<!-- Second Row with 4 Images -->
+   <div class="carousel-container">
+    <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="1958.jpg" class="d-block w-100" alt="Art 4">
+        </div>
+        <div class="carousel-item">
+          <img src="1958_1.jpg" class="d-block w-100" alt="Art 5">
+        </div>
+        <div class="carousel-item">
+          <img src="1958_2.jpg" class="d-block w-100" alt="Art 6">
+        </div>
+      </div>
+	  <div class="carousel-item">
+          <img src="1958_3.jpg" class="d-block w-100" alt="Art 6">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+ <!-- Image next to the carousel -->
+  <img src="car-3.png" class="side-image" alt="Side Image">
+</div>
 
 
 
